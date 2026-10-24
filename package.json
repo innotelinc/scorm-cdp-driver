@@ -1,0 +1,31 @@
+{
+  "name": "scorm-cdp-driver",
+  "version": "0.1.0",
+  "description": "Advance a SCORM e-learning player through an existing Chrome DevTools session: narration-gated NEXT, policy gates, and knowledge-check handling.",
+  "type": "module",
+  "bin": {
+    "scorm-drive": "src/cli.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/cli.mjs run",
+    "targets": "node src/cli.mjs targets",
+    "state": "node src/cli.mjs state",
+    "test": "node --test"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "scorm",
+    "litmos",
+    "elearning",
+    "cdp",
+    "chrome-devtools-protocol",
+    "automation",
+    "accessibility"
+  ],
+  "dependencies": {}
+}

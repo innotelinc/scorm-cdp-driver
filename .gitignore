@@ -1,0 +1,11 @@
+# scratch tooling from the original session
+tools/
+
+# run logs and captured screen content (contains course material)
+*.log
+*.out
+*.png
+run.log
+
+node_modules/
+.DS_Store
