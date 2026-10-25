@@ -1,5 +1,9 @@
 # scorm-cdp-driver
 
+[![CI](https://github.com/innotelinc/scorm-cdp-driver/actions/workflows/ci.yml/badge.svg)](https://github.com/innotelinc/scorm-cdp-driver/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+
 Advance a SCORM e-learning player running in a Chrome tab you already have open.
 
 It drives the player over the Chrome DevTools Protocol, presses **Next only when
@@ -9,6 +13,18 @@ and **stops at the attestation** that asks the learner to certify they completed
 the course themselves.
 
 Zero dependencies. Node 22+.
+
+## Why scorm-cdp-driver
+
+| Problem | Answer |
+| --- | --- |
+| Synthetic clicks are ignored by the player. | Real CDP input events at real coordinates, translated through nested iframes. |
+| Next is gated on the narration timeline. | The driver waits for the timeline to finish rather than clicking early. |
+| Policy links and knowledge checks block progress. | The known gates are cleared, and the attestation is deliberately left to the learner. |
+
+Its place in the stack is [docs/stack.md](docs/stack.md); the canonical
+definition of the shared layers is the
+[Innotel Platform Stack](https://github.com/innotelinc/innotel-platform-stack).
 
 ## Why this shape
 
@@ -110,3 +126,8 @@ record truthful. Whether completing a given course this way is acceptable is a
 question for the organisation that assigned it — many compliance trainings
 require the learner to actually engage with the material, and the record is
 usually relied on as evidence that they did.
+
+## License
+
+MIT — see [LICENSE](LICENSE). Copyright © 2026 Innotel Inc. Upstream material,
+where a directory carries its own licence, remains under that licence.

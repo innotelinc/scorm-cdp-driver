@@ -9,3 +9,7 @@ run.log
 
 node_modules/
 .DS_Store
+
+# Local environment (never commit)
+.env
+.env.local
