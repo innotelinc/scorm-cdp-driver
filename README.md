@@ -14,6 +14,8 @@ the course themselves.
 
 Zero dependencies. Node 22+.
 
+> **scorm-cdp-driver** is the LearningOps driver for a SCORM player you already have open in Chrome: it attaches over the Chrome DevTools Protocol, advances only when a slide's narration has finished, clears the known progress gates, checks every answer guess against the player's own feedback and logs it, and stops at the attestation instead of certifying on the learner's behalf. It has no sign-in of its own — it uses the browser session you already have — and ships with no dependencies on Node 22+. Landing page: [innotelinc.github.io/scorm-cdp-driver](https://innotelinc.github.io/scorm-cdp-driver/).
+
 ## Why scorm-cdp-driver
 
 | Problem | Answer |
